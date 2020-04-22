@@ -1,0 +1,70 @@
+<!--  -->
+<wxs src="../../utils/filters.wxs" module="filters" />
+<view class="fresh">
+  <search value='{{freshValue}}' bindinput="changeInput" bindconfirm='submit' />
+  <!-- tab -->
+  <view class="tab">
+    <view data-id="{{item.id}}" bindtap="changeTab" wx:for='{{categoryList}}' wx:key='{{index}}' class="tab_item {{category==item.id?'tab_active':''}}">
+      <text>{{item.name}}</text>
+      <view></view>
+    </view>
+  </view>
+</view>
+<view class="fresh_box">
+  <!-- 推荐 -->
+  <swiper class="fresh_swiper" next-margin='80px' wx:if='{{newList.length}}'>
+    <swiper-item class="fresh_item" wx:for="{{newList}}" wx:key="{{index}}">
+      <navigator navigate url="/pages/freshDetail/freshDetail?id={{item.id}}" class="item_box">
+        <backimg uri='{{filters.image(item.cover)}}' opacity='0.3'>
+          <view class="item_val">
+            <view class="item_head">
+              <view class="image">
+								<image src="{{filters.image(item.cover)}}" mode="aspectFill"></image>
+							</view>
+              <view>
+                <text>{{item.name}}</text>
+                <text>{{item.notice}}</text>
+              </view>
+            </view>
+            <view class="item_list">
+              <view wx:for='{{item.package_set}}' wx:for-index='indexs' wx:for-item='items' wx:key='{{indexs}}'>
+                <image src="{{filters.image(items.cover)}}" mode="aspectFill"></image>
+                <text>{{items.name}}</text>
+                <text>¥{{items.price*1}}</text>
+              </view>
+            </view>
+          </view>
+          <view class="item_icon">{{item.tags[0]}}</view>
+        </backimg>
+      </navigator>
+    </swiper-item>
+  </swiper>
+
+
+  <!-- 店铺列表 -->
+
+  <block wx:if='{{storList.length}}'>
+    <navigator navigate url="/pages/freshDetail/freshDetail?id={{item.id}}" class="store" wx:for='{{storList}}' wx:key='{{index}}'>
+      <image class="store_img" src="{{filters.image(item.cover)}}" mode="aspectFill"></image>
+      <view class="store_val">
+        <view class="store_head">
+          <text>{{item.name}}</text>
+          <text>销量 {{item.sales}}</text>
+        </view>
+        <view class="store_icon">
+          <image src="/images/member_b.png"></image>
+          <text wx:for='{{item.tags}}' wx:for-item='a' wx:for-index='i' wx:key='{{i}}'>{{a}}</text>
+        </view>
+        <text class="store_info">{{item.notice}}</text>
+        <view class="store_icons">
+          <text wx:for='{{item.package_set}}' wx:for-item='items' wx:for-index='i' wx:key='{{i}}'>{{items.name}}</text>
+        </view>
+      </view>
+    </navigator>
+    <text class="nomore" wx:if='{{storList.length>5}}'>{{loading?'加载中...':'没有更多了'}}</text>
+  </block>
+  <empty wx:else title='{{!storList.length?"暂无商家":"暂无更多商家"}}' />
+</view>
+
+
+<tabbar/>

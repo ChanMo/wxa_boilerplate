@@ -1,0 +1,4 @@
+<view class="empty">
+	<image src="/images/empty.png" mode="widthFix"></image>
+	<text class="empty_text">{{title}}</text>
+</view>

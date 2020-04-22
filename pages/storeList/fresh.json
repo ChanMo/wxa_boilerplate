@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+		"search":"/component/search/search",
+		"backimg":"/component/backimg/backimg",
+		"empty":"/component/empty/empty",
+    "tabbar": "/component/tabbar/tabbar"
+	},
+	"navigationBarTitleText": "抢新达",
+	"navigationBarBackgroundColor": "#FFCC52",
+	"enablePullDownRefresh": true,
+	"backgroundColor": "#FFCC52"
+}

@@ -1,0 +1,53 @@
+
+<wxs src="../../utils/filters.wxs" module="filters" />
+<view class="the_order">
+	<view class="the_store">
+		<view class="head_val">
+			<text style="font-size:32rpx;font-weight:bold;">{{order.store.name}}</text>
+			<text>{{order.store.notice}}</text>
+		</view>
+    <view><text>{{order.store.address}}</text></view>
+		<view></view>
+		<view></view>
+	</view>
+  <view class="the_head" style="border-bottom:none;padding-bottom:0;">
+		<image src="{{filters.image(order.packages[0].mirror.cover)}}" mode="aspectFill"></image>
+		<view class="head_val">
+			<text>{{order.packages[0].mirror.name}} x1</text>
+			<text>{{order.packages[0].mirror.description}}</text>
+			<text>¥{{order.packages[0].mirror.price}}</text>
+		</view>
+	</view>
+	<view class="the_ticket">
+		<view class="ticket_order">
+			<text>团购券</text>
+			<text>订单编号 {{number}}</text>
+		</view>
+		<view class="ticket_code">
+			<image src="{{filters.image(order.qrcode)}}"></image>
+			<text wx:if='{{order.status!="paid"}}'>已核销</text>
+		</view>
+	</view>
+	<view class="the_detail">
+		<text class="detail_title">订单信息</text>
+		<view class="detail_item">
+			<view>
+				<text>付款时间</text>
+				<text>{{order.created}}</text>
+			</view>
+			<!-- <view>
+				<text>使用时间</text>
+				<text>2020.10.10</text>
+			</view> -->
+			<view>
+				<text>数量</text>
+				<text>1</text>
+			</view>
+			<view>
+				<text>总价</text>
+				<text>¥{{order.amount}}</text>
+			</view>
+		</view>
+		<navigator wx:if='{{order.status!="paid"&&order.status!="over"}}' navigate url="/pages/grade/grade?number={{number}}" class="the_btn">评价</navigator>
+	</view>
+</view>

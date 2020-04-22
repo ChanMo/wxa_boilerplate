@@ -1,0 +1,8 @@
+
+<view class="success">
+	<image class="success_img" src="/images/success.png"></image>
+	<text class="success_text">{{type=='ex'?'商品兑换成功，可在兑换记录中查看!':'购买成功，快去查看商品吧!'}}</text>
+	<button wx:if='{{type!="ex"}}' class="success_btn" bindtap="seeOrder">查看订单</button>
+	<button wx:else class="success_btn" bindtap="seeChange">查看订单</button>
+	<button class="success_btns" bindtap="backHome">{{type=='ex'?'返回商城':'返回首页'}}</button>
+</view>

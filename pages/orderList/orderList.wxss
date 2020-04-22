@@ -1,0 +1,125 @@
+/* pages/order/order.wxss */
+
+.order_tab {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  width: fit-content;
+  padding: 30rpx 0;
+  overflow-y: scroll;
+}
+
+.tab_item {
+  font-size: 40rpx;
+  font-weight: 500;
+  width: 190rpx;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.tab_item text {
+  z-index: 1;
+  opacity: 0.6;
+}
+
+.tab_item view {
+  height: 14rpx;
+  width: 120rpx;
+  margin-top: -20rpx;
+  z-index: 0;
+}
+
+.tab_active text {
+  opacity: 1;
+}
+
+.tab_active view {
+  background-color: #ffcc52;
+}
+
+/*  */
+
+.order_box {
+
+}
+
+.order_item {
+  width: 630rpx;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0rpx 2rpx 15rpx 0rpx rgba(4, 0, 0, 0.06);
+  border-radius: 20rpx;
+	margin: 15rpx auto;
+	padding: 30rpx;
+  display: block;
+}
+.item_store{
+  padding-bottom: 10rpx;
+  border-bottom: 1rpx solid #f6f6f6;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.item_store text:nth-child(1){
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.item_store text:nth-child(2){
+  font-size: 24rpx;
+  padding-left: 20rpx;
+  color: #999;
+}
+.order_top{
+	display: flex;
+	flex-direction: row;
+  padding-top: 10rpx;
+}
+.order_top .order_img{
+	height: 100rpx;
+	width: 100rpx;
+	border-radius: 20rpx;
+}
+.order_top .order_val{
+	flex: 1;
+	padding: 15rpx 20rpx;
+	position: relative;
+}
+.order_top .order_val text:nth-child(1){
+	font-size: 30rpx;
+	display: block;
+}
+.order_top .order_val text:nth-child(2){
+	font-size: 24rpx;
+	position: absolute;
+	bottom: 15rpx;
+}
+.order_top .order_val text:nth-child(3){
+	font-size: 24rpx;
+	position: absolute;
+	bottom: 15rpx;
+	right: 0;
+}
+
+.order_time{
+	display: flex;
+	flex-direction: row;
+	margin-top: 20rpx;
+}
+.order_time text:nth-child(1){
+	flex: 1;
+	color: #666666;
+	font-size: 20rpx;
+	line-height: 45rpx;
+}
+.order_time navigator{
+	display: block;
+	font-size: 24rpx;
+	border: 1rpx solid #CCCCCC;
+	padding: 3rpx 20rpx;
+	border-radius: 30rpx;
+	margin-left: 10rpx;
+}

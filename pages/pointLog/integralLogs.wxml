@@ -1,0 +1,15 @@
+<view class="logs_head">
+
+</view>
+<view class="logs_box">
+  <block wx:if='{{pointsList.length}}'>
+    <view class="logs_item" wx:for='{{pointsList}}' wx:key='{{index}}'>
+      <text>{{item.name}}</text>
+      <text style="{{item.amount<0?'color:#999':''}}">{{item.amount>0?'+'+item.amount:item.amount}}</text>
+      <text>{{item.created}}</text>
+      <view></view>
+    </view>
+    <text class="nomore" wx:if='{{postsList.length>5}}'>{{loading?'加载中...':'没有更多了'}}</text>
+  </block>
+  <empty wx:else/>
+</view>

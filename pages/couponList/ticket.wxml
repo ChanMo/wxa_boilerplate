@@ -1,0 +1,21 @@
+<view style="height:20rpx"></view>
+<block wx:if='{{!loading}}'>
+  <block wx:if='{{ticketList.length}}'>
+    <view class="ticket" data-index="{{index}}" bindtap="setTicket" wx:for='{{ticketList}}' wx:key='{{index}}'>
+      <backimg uri='/images/ticket.png'>
+        <view class="ticket_box">
+          <view class="ticket_left">
+            <text>{{item.coupon.price*1}}</text>
+            <text>{{item.coupon.name}}</text>
+          </view>
+          <view class="ticket_right">
+            <text>全场使用</text>
+            <text>使用时间  2019.09.09-2020.09.09</text>
+          </view>
+        </view>
+      </backimg>
+    </view>
+    <text class="nomore" wx:if='{{ticketList.length>5}}'>{{loading?'加载中...':'没有更多了'}}</text>
+  </block>
+  <empty wx:else/>
+</block>

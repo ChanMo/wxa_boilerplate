@@ -1,0 +1,9 @@
+
+
+
+<view class="list_item" hover-class="list_item_hover" data-path="{{item.path}}" wx:for='{{list}}' wx:key='{{index}}' bindtap="links">
+	<image wx:if='{{item.icon}}' class="list_icon" src="{{item.icon}}"></image>
+	<view class="list_text">{{item.name}}</view>
+	<view class="list_value">{{item.value}}</view>
+	<image class="list_right" src="./right.png" mode="widthFill"></image>
+</view>

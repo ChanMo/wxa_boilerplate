@@ -1,0 +1,30 @@
+<wxs src="../../utils/filters.wxs" module="filters" />
+<view class="order_tab">
+  <view wx:for='{{tabList}}' wx:key='{{index}}' class="tab_item {{tab_active==index?'tab_active':''}}" data-index="{{index}}" bindtap="changeTab">
+    <text>{{item}}</text>
+    <view></view>
+  </view>
+</view>
+
+<view class="order_box" wx:if='{{ordersList.length}}'>
+  <navigator class="order_item" wx:for='{{ordersList}}' wx:key='{{index}}'>
+    <view class="item_store">
+      <text>小米商城</text>
+      <text>性价比高</text>
+    </view>
+    <view navigate url="/pages/theOrder/theOrder" class="order_top">
+      <imgcard class="order_img" src="" mode="aspectFill"></imgcard>
+      <view class="order_val">
+        <text>小米手机</text>
+        <text>x4</text>
+        <text>¥999</text>
+      </view>
+    </view>
+    <view class="order_time">
+      <text>{{item.created}}</text>
+      <navigator wx:if='{{item.status!=="paid"&&item.status!=="over"}}' navigate url="/pages/grade/grade?number={{item.number}}">评价</navigator>
+    </view>
+  </navigator>
+	<text class="nomore" wx:if='{{ordersList.length>5}}'>{{loading?'加载中...':'没有更多了'}}</text>
+</view>
+<empty wx:else title='暂无订单'/>

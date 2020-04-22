@@ -1,0 +1,16 @@
+<!-- head -->
+<wxs src="../../utils/filters.wxs" module="filters" />
+<view class="user_head">
+  <view class="user">
+    <navigator navigate url="/pages/member/member" class="user_img">
+      <image src="{{filters.image(profile.get_avatar)}}"></image>
+    </navigator>
+    <view>
+			<text>微信小程序</text>
+			<text>jao341om31</text>
+		</view>
+  </view>
+</view>
+
+
+<tabbar/>

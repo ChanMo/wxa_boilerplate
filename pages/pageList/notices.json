@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+		"flatlist":"/component/flatlist/flatlist"
+	},
+	"enablePullDownRefresh": true,
+	"navigationBarTitleText": "社区公告"
+}

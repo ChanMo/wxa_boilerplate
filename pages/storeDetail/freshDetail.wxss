@@ -1,0 +1,371 @@
+/* pages/freshDetail/freshDetail.wxss */
+
+page {
+  background-color: #f2f2f2;
+}
+
+.fresh_head {
+  height: 338rpx;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  overflow-x: hidden;
+}
+
+.fresh_head .head_back {
+  height: 2000rpx;
+  width: 2000rpx;
+  background-color: #ffcc52;
+  border-radius: 0 0 1000rpx 1000rpx;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.head_box {
+  height: 206rpx;
+  width: 88%;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  padding: 0 6%;
+}
+
+.head_val {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.head_val text:nth-child(1) {
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.head_val text:nth-child(2) {
+  font-size: 30rpx;
+}
+
+.head_val text:nth-child(3) {
+  font-size: 24rpx;
+}
+
+.head_box view:nth-child(2) {
+  width: 2rpx;
+  height: 40rpx;
+  background-color: #333;
+}
+
+.head_box .tell {
+  background: none;
+  height: 60rpx;
+  width: 60rpx;
+  margin-left: 58rpx;
+}
+
+.head_box .tell image {
+  height: 100%;
+  width: 100%;
+}
+
+/* banner */
+
+.banner {
+  height: 400rpx;
+  width: 650rpx;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.banner .banner_item {
+	border-radius: 20rpx;
+	overflow: hidden;
+}
+
+.banner image {
+  height: 400rpx;
+  width: 650rpx;
+}
+
+.banner text {
+  position: absolute;
+  z-index: 1;
+  right: 20rpx;
+  bottom: 20rpx;
+  display: block;
+  height: 24rpx;
+  border-radius: 12rpx;
+  color: #fff;
+  background-color: #000;
+  opacity: 0.3;
+  font-size: 18rpx;
+  font-weight: 500;
+  text-align: center;
+  line-height: 24rpx;
+  padding: 0 10rpx;
+}
+
+/* line */
+
+.line {
+  width: 630rpx;
+  margin: 30rpx auto;
+  height: 2rpx;
+  /* background-color: #e6e6e6; */
+}
+
+/* swiper */
+
+.course_swiper {
+  height: 770rpx;
+}
+
+.course_box {
+  height: 770rpx;
+  width: 650rpx;
+  margin: auto;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 20px;
+  position: relative;
+	overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 11 */
+
+.course_top {
+  display: flex;
+  flex-direction: column;
+  padding: 30rpx;
+	padding-bottom: 60rpx;
+}
+
+.course_top text:nth-child(1) {
+  font-size: 34rpx;
+  font-weight: 500;
+}
+
+.course_top text:nth-child(2) {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.course_top text:nth-child(3) {
+  font-size: 24rpx;
+  color: #666;
+  position: absolute;
+  right: 30rpx;
+  top: 50rpx;
+}
+
+.course_top view {
+  position: absolute;
+  top: 30rpx;
+  left: 0;
+  width: 6rpx;
+  height: 32rpx;
+  background: rgba(255, 204, 82, 1);
+}
+
+/* 22 */
+
+.course_banner {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin: 0 25rpx;
+  border-bottom: 2rpx solid #e6e6e6;
+  padding-bottom: 30rpx;
+}
+
+.course_banner image {
+  width: 33%;
+  display: block;
+  height: 160rpx;
+  border-radius: 20rpx;
+  margin: 0 5rpx;
+}
+
+/* 33 */
+
+.course_val {
+  padding: 30rpx;
+  flex: 1;
+  overflow-y: scroll;
+}
+
+.course_val text {
+  font-size: 28rpx;
+  font-weight: 500;
+}
+
+.course_val view {
+  font-size: 24rpx;
+  color: #666;
+}
+
+/* 44 */
+
+.course_time {
+  height: 100rpx;
+	padding: 10rpx 30rpx;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+  background: linear-gradient(90deg, rgba(255, 139, 82, 1) 0%, rgba(255, 82, 82, 1) 56.00000000000001%, rgba(255, 64, 64, 1) 99%);
+}
+.course_time .time_num{
+	color: #FF4446;
+	font-size: 20rpx;
+	font-weight: 500;
+	padding: 5rpx 10rpx;
+	border-radius: 20rpx;
+	background-color: #fff;
+	width: fit-content;
+	text-shadow:0px 10rpx 15rpx rgba(255,83,81,1);
+	margin-bottom: 10rpx;
+	margin-top: 10rpx;
+}
+.course_time .time_line{
+	width: 220rpx;
+	height: 30rpx;
+	background:rgba(255,255,255,0.3);
+	border-radius: 15rpx;
+}
+.course_time .time_line view{
+	background-color: #fff;
+	height: 20rpx;
+	margin: 5rpx;
+	min-width: 5rpx;
+	border-radius: 10rpx;
+}
+.course_time .time_timing{
+	position: absolute;
+	right: 30rpx;
+	line-height: 100rpx;
+	font-size: 30rpx;
+	color: #fff;
+	text-shadow:0px 10px 15px rgba(255,83,81,1);
+}
+
+
+/* 评价 */
+.review{
+	background-color: #fff;
+	border-radius: 20rpx;
+	position: relative;
+	padding: 10rpx 30rpx;
+	margin: 30rpx;
+}
+.review .review_head{
+	padding: 30rpx 0;
+	border-bottom: 2rpx solid #E6E6E6;
+	display: flex;
+	flex-direction: row;
+}
+.review_head text:nth-child(1){
+	font-size: 34rpx;
+	font-weight: 500;
+	line-height: 40rpx;
+	flex: 1;
+}
+.review_head text:nth-child(2){
+	font-size: 24rpx;
+	line-height: 40rpx;
+	color: #666666;
+}
+.review_head view{
+	width:6rpx;
+	height:32rpx;
+	background:rgba(255,204,82,1);
+	position: absolute;
+	left: 0;
+	top:45rpx;
+}
+.review_bottom{
+	padding: 20rpx 0;
+}
+.review_item{
+	display: flex;
+	flex-direction: row;
+	padding: 20rpx 0;
+}
+.review_item image{
+	height: 50rpx;
+	width: 50rpx;
+	border-radius: 25rpx;
+}
+.review_item view{
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding-left: 20rpx;
+}
+.review_item view text:nth-child(1){
+	font-size: 24rpx;
+	font-weight: 500;
+	flex: 1;
+	line-height: 45rpx;
+}
+.review_item view text:nth-child(2){
+	font-size: 24rpx;
+	color: #666;
+	line-height: 45rpx;
+}
+.review_item view text:nth-child(3){
+	width: 100%;
+	font-size: 26rpx;
+}
+
+
+
+/*  */
+
+.bottom {
+  width: 100%;
+  height: 120rpx;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  border-top: 1rpx solid #ffcc52;
+  display: flex;
+  flex-direction: row;
+	z-index: 3000;
+}
+
+.bottom text:nth-child(1) {
+  flex: 1;
+  text-align: right;
+  font-size: 30rpx;
+  color: #999;
+  line-height: 130rpx;
+  padding-right: 10rpx;
+  text-decoration: line-through;
+}
+
+.bottom text:nth-child(2) {
+  font-size: 48rpx;
+  color: #f50;
+  line-height: 120rpx;
+}
+
+.bottom button {
+  margin: 0 30rpx !important;
+  background: linear-gradient(40deg, rgba(255, 186, 82, 1) 28.999999999999996%, rgba(255, 212, 82, 1) 100%);
+  border-radius: 20rpx;
+  margin-top: 20rpx !important;
+  height: 80rpx !important;
+  width: 250rpx !important;
+  color: #fff;
+  line-height: 80rpx;
+  text-shadow: 0rpx 10rpx 15rpx rgba(255, 153, 0, 0.7);
+}

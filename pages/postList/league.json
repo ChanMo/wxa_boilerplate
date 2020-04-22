@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+		"upload":"/component/upload/upload",
+		"empty":"/component/empty/empty",
+    "tabbar":"/component/tabbar/tabbar"
+	},
+	"navigationBarTitleText": "我爱社区",
+	"enablePullDownRefresh": true,
+	"navigationBarBackgroundColor": "#fcfcfc"
+}

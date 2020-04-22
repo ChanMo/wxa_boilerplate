@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+		"timing":"/component/timing/timing",
+		"empty":"/component/empty/empty"
+	},
+	"navigationBarTitleText": "商家详情",
+	"navigationBarBackgroundColor": "#FFCC52"
+}

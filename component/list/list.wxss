@@ -1,0 +1,33 @@
+/* component/list/list.wxss */
+.list_item{
+	display: flex;
+	flex-direction: row;
+	border-bottom: 1rpx solid #e1e1e1;
+	padding: 30rpx 20rpx;
+}
+.list_item_hover{
+	opacity: 0.6;
+}
+.list_item .list_icon{
+	width: 32rpx;
+	height: 32rpx;
+	border-radius: 2rpx;
+}
+.list_item .list_text{
+	font-size: 32rpx;
+	color: #333;
+	line-height: 32rpx;
+	flex: 1;
+}
+.list_value{
+	font-size: 28rpx;
+	color: #999;
+	line-height: 32rpx;
+	margin-right: 10rpx;
+
+}
+.list_item .list_right{
+	width: 22rpx;
+	height: 22rpx;
+	margin: 5rpx 0;
+}

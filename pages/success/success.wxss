@@ -1,0 +1,44 @@
+/* pages/succes/success.wxss */
+
+.success{
+	display: flex;
+	flex-direction: column;
+	justify-items: center;
+	justify-content: center;
+	text-align: center;
+	margin-top: 100rpx;
+}
+.success_img{
+	width: 465rpx;
+	height: 465rpx;
+	display: block;
+	margin: auto;
+	padding-bottom: 0;
+}
+.success_text{
+	font-size: 32rpx;
+}
+button{
+	border: 2rpx solid #FFCC52;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	justify-items: center;
+	width: 470rpx !important;
+	margin-top: 40rpx;
+	height: 100rpx !important;
+	font-size: 36rpx !important;
+	border-radius: 20rpx;
+}
+.success_btn{
+	background-color: #FFCC52;
+	font-weight: 400;
+	color: #ffffff;
+	margin-top: 100rpx;
+}
+.success_btns{
+	background-color: #ffffff;
+	color: #FFCC52;
+}

@@ -1,0 +1,3 @@
+<view class="imgcard">
+	<image mode='{{mode}}'></image>
+</view>

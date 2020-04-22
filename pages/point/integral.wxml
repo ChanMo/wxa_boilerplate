@@ -1,0 +1,39 @@
+
+<wxs src="../../utils/filters.wxs" module="filters" />
+<view class="integral_head">
+  <text>可使用积分</text>
+  <text>{{profile.point*1}}</text>
+</view>
+<view class="integral_box">
+  <view class="integral_tab">
+    <navigator navigate url="/pages/exchangeLogs/exchangeLogs">
+      <image src="/images/integral_1.png"></image>
+      兑换记录
+    </navigator>
+    <navigator navigate url="/pages/integralRule/integralRule">
+      <image src="/images/integral_2.png"></image>
+      积分规则
+    </navigator>
+    <navigator navigate url="/pages/integralLogs/integralLogs">
+      <image src="/images/integral_3.png"></image>
+      积分记录
+    </navigator>
+  </view>
+  <view class="goods">
+    <view class="goods_title">
+      <image src="/images/league_zan2.png"></image>
+      <text>兑换专区</text>
+    </view>
+    <block wx:if='{{goodsList.length}}'>
+      <view class="goods_box">
+        <navigator navigate url="/pages/goods/goods?id={{item.id}}" class="goods_item" wx:for='{{goodsList}}' wx:key='{{index}}'>
+          <image src="{{item.images.length?filters.image(item.images[0]):''}}" mode="aspectFill"></image>
+          <text>{{item.name}}</text>
+          <text>{{item.price*1}}积分</text>
+        </navigator>
+      </view>
+      <text class="nomore" wx:if='{{goodsList.length>5}}'>{{loading?'加载中...':'没有更多了'}}</text>
+    </block>
+    <empty wx:else />
+  </view>
+</view>

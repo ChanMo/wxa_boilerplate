@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+		"backimg":"/component/backimg/backimg",
+		"empty":"/component/empty/empty"
+	},
+	"navigationBarTitleText": "我的优惠券",
+	"enablePullDownRefresh": true
+}

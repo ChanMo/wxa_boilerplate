@@ -1,0 +1,53 @@
+<!--  -->
+<wxs src="../../utils/filters.wxs" module="filters" />
+<block wx:if='{{!loading}}'>
+  <block wx:if='{{postsList.length}}'>
+    <view class="league" wx:for='{{postsList}}' wx:key='{{index}}'>
+      <view class="league_top">
+        <navigator navigate url="/pages/postLogs/postLogs?user={{item.user.id}}&name={{item.user.get_nickname?item.user.get_nickname:item.user.username}}" class="top_user">
+          <image src="{{filters.image(item.user.get_avatar)}}"></image>
+          <text>{{item.user.get_nickname?item.user.get_nickname:item.user.username}}</text>
+        </navigator>
+        <view class="top_time">
+          <image src="/images/time.png"></image>
+          <text>{{filters.getHours(item.created)}}</text>
+        </view>
+      </view>
+      <view class="league_center">
+        <text class="center_text">{{item.content}}</text>
+        <upload list='{{item.images}}' />
+        <view class="center_val">
+          <view data-id="{{item.id}}" bindtap="likes">
+            <image src="{{item.is_like?'/images/league_zan2.png':'/images/league_zan1.png'}}"></image>{{item.likes}}</view>
+          <navigator navigate url="/pages/post/post?id={{item.id}}">
+            <image src="/images/league_call.png"></image>{{item.comments}}</navigator>
+        </view>
+      </view>
+      <navigator navigate url="/pages/post/post?id={{item.id}}" class="league_bottom" wx:if='{{item.comment_set.length}}'>
+        <view wx:for='{{item.comment_set}}' wx:key='{{i}}' wx:for-item='v' wx:for-index='i'>
+          <text>{{v.user.get_nickname?v.user.get_nickname:v.user.username}}:  </text>
+          <text>{{v.content}}</text>
+        </view>
+      <view wx:if='{{item.comment_set.length}}' class="league_post">查看全部评论</view>
+      </navigator>
+    </view>
+    <text class="nomore" wx:if='{{postsList.length>1}}'>{{loading?'加载中...':'没有更多了'}}</text>
+  </block>
+  <empty wx:elif='{{!loading}}' />
+</block>
+
+<navigator class="issue" navigate url="/pages/issue/issue">
+  <image src="/images/send.png"></image>
+</navigator>
+
+
+<view class="modals" wx:if='{{submit}}'>
+	<view class="modals_back" bindtap="close"></view>
+  <view class="submits">
+    <input bindinput="changeInput" auto-focus placeholder="评论"></input>
+    <button disabled="{{!content&&disabled}}" bindtap="submit">发送</button>
+  </view>
+</view>
+
+
+<tabbar/>

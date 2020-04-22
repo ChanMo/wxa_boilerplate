@@ -1,0 +1,14 @@
+
+<wxs src="../../utils/filters.wxs" module="filters" />
+<view class="grade">
+  <view class="the_head">
+    <image src="{{filters.image(order.packages[0].mirror.cover)}}"></image>
+    <view class="head_val">
+      <text>{{order.store.name}}</text>
+      <text>{{order.packages[0].mirror.name}} x1</text>
+      <text>¥{{order.amount*1}}</text>
+    </view>
+  </view>
+	<textarea disabled="{{detail}}" bindinput="changeInput" class="garde_text" placeholder="评价"></textarea>
+  <button wx:if='{{!detail}}' bindtap="submit" class="the_btn">立即提交</button>
+</view>

@@ -1,0 +1,16 @@
+<wxs src="../../utils/filters.wxs" module="filters" />
+<view>
+  <navigator wx:for='{{noticeList}}' wx:key='{{index}}' navigate url="/pages/notice/notice?id={{item.id}}" class="notice_item_back">
+    <image mode="" src="{{filters.image(item.cover)}}"></image>
+    <view class="notice_flex">
+      <view class="notice_val">
+        <text>{{item.title}}</text>
+        <text class="gray">{{item.description}}</text>
+      </view>
+      <view class="notice_time">
+        <text>{{filters.getDay(item.created)}}</text>
+        <text>{{filters.getMonth(item.created)+'月'}}</text>
+      </view>
+    </view>
+  </navigator>
+</view>

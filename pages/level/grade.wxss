@@ -1,0 +1,71 @@
+/* pages/grade/grade.wxss */
+
+page{
+	background-color: #FFCC52;
+}
+.grade{
+	border-radius: 20rpx;
+	width: 690rpx;
+	background-color: #ffffff;
+	margin: 2vh auto;
+	height: 96vh;
+}
+/* head */
+.the_head{
+	border-bottom: 1rpx solid #E6E6E6;
+	position: relative;
+	margin: 0 30rpx;
+	padding: 30rpx 0;
+	display: flex;
+	flex-direction: row;
+}
+.the_head image{
+	height: 100rpx;
+	width: 100rpx;
+	border-radius: 20rpx;
+}
+.the_head .head_val{
+	position: relative;
+	flex: 1;
+	padding-left: 30rpx;
+	display: flex;
+	flex-direction: column;
+}	
+.the_head .head_val text:nth-child(1){
+	font-size: 30rpx;
+	color: #666666;
+	line-height: 50rpx;
+}
+.the_head .head_val text:nth-child(2){
+	font-size: 24rpx;
+	color: #666666;
+	line-height: 50rpx;
+}
+.the_head .head_val text:nth-child(3){
+	position: absolute;
+	right: 0;
+	top: 32rpx;
+	font-size: 30rpx;
+}
+
+.garde_text{
+	background-color: #F2F1ED;
+	border-radius: 20rpx;
+	padding: 50rpx 60rpx;
+	min-height: 300rpx;
+	width: 510rpx;
+	margin: 30rpx auto;
+	font-size: 28rpx;
+}
+
+/* button */
+.the_btn{
+	height: 80rpx;
+	margin: auto;
+	width: 300rpx;
+	background-color: #FFCC52;
+	line-height: 80rpx;
+	font-weight: 500;
+	border-radius: 20rpx;
+	margin-top: 60rpx;
+}

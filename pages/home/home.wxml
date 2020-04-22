@@ -1,0 +1,9 @@
+<!-- banner -->
+<view class="banner" wx:if='{{bannerList.length}}'>
+  <swiper class="banner" autoplay circular bindchange='changeBanner'>
+    <swiper-item class="banner_item" wx:for="{{bannerList}}" wx:key="{{index}}">
+      <image mode="" src="{{filters.image(item.image)}}"></image>
+    </swiper-item>
+  </swiper>
+  <text>{{bannerIndex+1}}/{{bannerList.length}}</text>
+</view>

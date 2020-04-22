@@ -1,0 +1,232 @@
+/* pages/fresh/fresh.wxss */
+page{
+	background-color: #fcfcfc;
+}
+.fresh {
+  background-color: #ffcc52;
+	padding-bottom: 20rpx;
+	padding-top: 20rpx;
+}
+
+.tab {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  width: fit-content;
+  padding: 30rpx 0;
+}
+
+.tab_item {
+  font-size: 40rpx;
+  font-weight: 500;
+  width: 160rpx;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.tab_item text {
+  z-index: 1;
+  opacity: 0.6;
+}
+
+.tab_item view {
+  height: 14rpx;
+  width: 100rpx;
+  margin-top: -20rpx;
+  z-index: 0;
+}
+
+.tab_active text {
+  opacity: 1;
+}
+
+.tab_active view {
+  background-color: #fff;
+}
+
+/* fresh_box */
+.fresh_box {
+  background-color: #fff;
+  box-shadow: 0rpx -5rpx 8rpx 0rpx rgba(255, 204, 82, 0.31);
+  border-radius: 20rpx 20rpx 0rpx 0rpx;
+	margin-top: -20rpx;
+	padding-top: 15rpx;
+}
+
+.fresh_swiper{
+	width: 750rpx;
+	height: 430rpx;
+	margin: auto;
+}
+.item_box{
+	margin: 15rpx;
+	margin-left: 20rpx;
+	margin-right: 10rpx;
+	border-radius: 20rpx;
+	overflow: hidden;
+	background: #ffffff;
+	height: 410rpx;
+	box-shadow:0rpx 5rpx 15rpx 0rpx rgba(242,241,237,1);
+}
+.item_val{
+	background-color: #ffffff;
+	height: 310rpx;
+	margin-top: 100rpx;
+	position: relative;
+}
+.item_head{
+	position: absolute;
+	top: -60rpx;
+	padding: 0 10rpx;
+	display: flex;
+	flex-direction: row;
+}
+.item_head .image image{
+	height: 100rpx;
+	width: 100rpx;
+	border-radius: 20rpx;
+}
+.item_head view{
+	display: flex;
+	flex-direction: column;
+	padding-left: 20rpx;
+}
+.item_head view text:nth-child(1){
+	color: #ffffff;
+	font-size: 36rpx;
+	font-weight: 500;
+	line-height: 60rpx;
+}
+.item_head view text:nth-child(2){
+	color: #666666;
+	font-size: 24rpx;
+	line-height: 40rpx;
+}
+.item_list{
+	display: flex;
+	flex-direction: row;
+	padding: 0 20rpx;
+}
+.item_list view{
+	width: 200rpx;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 60rpx;
+}
+.item_list view .image{
+	height: 160rpx;
+	width: 160rpx;
+	border-radius: 20rpx;
+	overflow: hidden;
+}
+.item_list view image{
+	height: 160rpx;
+	width: 160rpx;
+	border-radius: 20rpx;
+}
+.item_list view text:nth-child(2){
+	font-size: 24rpx;	
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	display: block;
+	width: 160rpx;
+	text-align: left;
+}
+.item_list view text:nth-child(3){
+	font-size: 24rpx;
+	color: #FF5500;
+	text-align: left;
+	width: 160rpx;
+}
+.item_icon{
+	position: absolute;
+	right: 0;
+	top: 0;
+	background-color: #333333;
+	height: 40rpx;
+	padding: 0 15rpx;
+	border-bottom-left-radius: 20rpx;
+	color: #FFCC52;
+	line-height: 40rpx;
+}
+
+/* store */
+.store{
+	margin: 20rpx;
+	border-radius: 20rpx;
+	overflow: hidden;
+	background: #ffffff;
+	min-height: 110rpx;
+	box-shadow:0rpx 5rpx 15rpx 0rpx rgba(242,241,237,1);
+	display: flex;
+	flex-direction: row;
+	padding: 30rpx;
+}
+.store_img{
+	height: 160rpx;
+	width: 160rpx;
+	border-radius: 20rpx;
+}
+.store_val{
+	padding-left: 20rpx;
+	flex:1;
+}
+.store_val .store_head{
+	display: flex;
+	flex-direction: row;
+}
+.store_val .store_head text:nth-child(1){
+	font-size: 28rpx;
+	font-weight: 500;
+	flex: 1;
+}
+.store_val .store_head text:nth-child(2){
+	font-size: 24rpx;
+	color: #999999;
+}
+.store_val .store_icon{
+	display: flex;
+	flex-direction: row;
+}
+.store_val .store_icon image{
+	height: 34rpx;
+	width: 34rpx;
+}
+.store_val .store_icon text{
+	height: 24rpx;
+	display: block;
+	padding: 0 10rpx;
+	color: #FFB940;
+	border-right: 1rpx solid #e1e1e1;
+	line-height: 34rpx;
+}
+.store_val .store_icon text:last-child{
+	border-right: none;
+}
+.store_val .store_info{
+	color: #999999;
+	font-size: 22rpx;
+}
+.store_val .store_icons{
+	position: relative;
+	overflow: hidden;
+	height: 40rpx;
+}
+.store_val .store_icons text{
+	float: left;
+	display: block;
+	margin: 4rpx 10rpx;
+	margin-left: 0;
+	background-color: #FFEEE5;
+	border-radius: 20rpx;
+	font-size: 22rpx;
+	color: #FF7733;
+	padding: 2rpx 10rpx;
+}

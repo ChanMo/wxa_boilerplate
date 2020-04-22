@@ -1,0 +1,9 @@
+
+
+<wxs src="../../utils/filters.wxs" module="filters" />
+<view class="backimg">
+	<image src="{{filters.image(uri)}}" mode="widthFix" class="backimg_img"></image>
+	<view class="backimg_view" style="background-color:rgba(0,0,0,{{opacity}})">
+		<slot/>
+	</view>
+</view>

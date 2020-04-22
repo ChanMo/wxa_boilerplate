@@ -1,0 +1,92 @@
+<wxs src="../../utils/filters.wxs" module="filters" />
+<view class='fresh_head'>
+  <view class="head_back"></view>
+  <view class="head_box">
+    <view class="head_val">
+      <text>{{detail.name}}</text>
+      <text>{{detail.notice}}</text>
+      <text>{{detail.address}}</text>
+    </view>
+    <view></view>
+    <view class="tell" data-phone="{{detail.phone}}" bindtap='tell'>
+      <image src="/images/calls.png"></image>
+    </view>
+  </view>
+</view>
+<view style="margin-top: -132rpx; position: relative; z-index: 1;">
+  <block wx:if='{{detail.images.length}}'>
+    <!-- banner -->
+    <view class="banner">
+      <swiper class="banner" autoplay circular bindchange='changeBanner'>
+        <swiper-item class="banner_item" wx:for="{{detail.images}}" wx:key="{{index}}">
+          <image mode="aspectFill" src="{{filters.image(item)}}"></image>
+        </swiper-item>
+      </swiper>
+      <text>{{bannerIndex+1}}/{{detail.images.length}}</text>
+    </view>
+    <!--  -->
+    <view class="line"></view>
+  </block>
+  <!--  -->
+  <swiper class="course_swiper" bindchange='changeTab' next-margin='20px' previous-margin="20px" current="{{tabIndex}}">
+    <swiper-item class="course_item" wx:for="{{detail.package_set}}" wx:key="{{index}}">
+      <view class="course_box">
+        <view class="course_top">
+          <text>{{item.name}}</text>
+          <text></text>
+          <text>销量 {{item.sales}}</text>
+          <view></view>
+        </view>
+        <view class="course_banner">
+          <image wx:for='{{item.images}}' mode="aspectFill" wx:for-item='it' wx:for-index='ind' wx:key='{{ind}}' src="{{filters.image(it)}}"></image>
+        </view>
+        <view class="course_val">
+          <text>套餐详情</text>
+          <view>
+            {{item.description}}
+          </view>
+        </view>
+        <view class="course_time">
+          <view class="time_num">已抢{{item.stock_total-item.stock>0?item.stock_total-item.stock:0}}份,共{{item.stock_total}}份</view>
+          <view class="time_line">
+            <view style="width:{{210*((item.stock_total-item.stock)/item.stock_total)+'rpx'}}"></view>
+          </view>
+          <view class="time_timing">
+            <timing time='{{item.end_time}}' wx:if='{{tabIndex==index}}' />
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>
+
+
+<!-- 评价 -->
+<view class="review">
+  <view class="review_head">
+    <text>店铺评价</text>
+    <navigator navigate url="/pages/reviews/reviews?id={{detail.id}}">查看更多</navigator>
+    <view></view>
+  </view>
+  <view class="review_bottom">
+    <block wx:if='{{reviewList.length}}'>
+      <view class="review_item" wx:for='{{reviewList}}' wx:key='{{index}}'>
+        <image src="{{filters.image(item.user.get_avatar)}}"></image>
+        <view>
+          <text>{{item.user.get_nickname?item.user.get_nickname:item.user.username}}</text>
+          <text>{{item.created}}</text>
+          <text>{{item.content}}</text>
+        </view>
+      </view>
+    </block>
+    <empty wx:else title='暂无评价' />
+  </view>
+</view>
+
+
+<view style="height:140rpx;"></view>
+<view class="bottom">
+  <text>¥{{detail.package_set[tabIndex].price_original*1}}</text>
+  <text>¥{{detail.package_set[tabIndex].price*1}}</text>
+  <button data-name="{{detail.name}}" data-id="{{detail.package_set[tabIndex].id}}" disabled="{{!detail.package_set[tabIndex].stock||filters.contrast(detail.package_set[tabIndex].end_time)}}" bindtap="pay">立即抢购</button>
+</view>

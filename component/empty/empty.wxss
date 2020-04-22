@@ -1,0 +1,20 @@
+/* component/empty/empry.wxss */
+
+.empty{
+	width: 80%;
+	flex: 1;
+	margin: 0 auto;
+  height: 500rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.empty image{
+	width: 100%;
+}
+.empty_text{
+	display: block;
+	width: 100%;
+	text-align: center;
+	color: #999999;
+}

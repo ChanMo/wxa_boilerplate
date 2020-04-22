@@ -1,0 +1,42 @@
+/* pages/ticket/ticket.wxss */
+
+
+.ticket{
+	height: 241rpx;
+	width: 664rpx;
+	margin: auto;
+}
+
+.ticket_box{
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	padding: 0 10rpx;
+}
+.ticket_box .ticket_left{
+	flex: 215;
+	height: 200rpx;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.ticket_left text:nth-child(1){
+	font-size: 72rpx;
+	font-weight: bold;
+	line-height: 74rpx;
+}
+.ticket_left text:nth-child(2){
+	font-size: 22rpx;
+}
+.ticket_box .ticket_right{
+	flex: 426;
+	height: 200rpx;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.ticket_box .ticket_right text{
+	font-size: 22rpx;
+	padding-left: 24rpx;
+}

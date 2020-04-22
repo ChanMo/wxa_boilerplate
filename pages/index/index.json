@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+		"tabbar":"/component/tabbar/tabbar",
+		"List":"/component/list/list"
+	}
 }

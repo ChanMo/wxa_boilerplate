@@ -1,0 +1,8 @@
+
+<wxs src="../../utils/filters.wxs" module="filters" />
+<view class="notice">
+  <text>{{notice.title}}</text>
+  <text class="gray">{{notice.created}}</text>
+	<image src="{{filters.image(notice.cover)}}"></image>
+	<rich-text nodes='{{notice.content}}'></rich-text>
+</view>
